@@ -1,5 +1,7 @@
 # My Lab 13.1 Reflection
 
+**Author:** Dr. Chantell McDowell, Per Scholas student
+
 ## 1. Why should I whitelist IP addresses?
 
 I would allow only the IP addresses that need to connect to my database. This adds a network barrier alongside my username and password. Allowing `0.0.0.0/0` means any IPv4 address can try to connect. It does not remove password protection, but it exposes the database to more unwanted connection attempts. If my credentials are stolen, an attacker could try to read, change, or delete data. I would use restricted network access for a real production application.

@@ -1,5 +1,7 @@
 # Lab 13.1: Connecting a Database
 
+**Author:** Dr. Chantell McDowell, Per Scholas student
+
 I built a small Node.js and Express application that connects to MongoDB Atlas. This is the starting point for a social media API. My application has one GET route at `/`. It returns a success message when MongoDB responds and a 500 error message when the connection fails. This lab checks the connection; it does not create users, posts, or collections.
 
 I used Express to create my server, MongoClient to connect to MongoDB, and dotenv to load my private connection string. I kept the code simple so I can follow what each part does. The response is JSON, so this assignment does not need HTML, CSS, or React.
