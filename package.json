@@ -1,0 +1,9 @@
+{
+  "name": "dr-chantell-lab-13-1-connecting-a-database",
+  "version": "1.0.0",
+  "description": "My first Express connection to MongoDB Atlas",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "private": true,
+  "dependencies": { "dotenv": "^16.6.1", "express": "^5.1.0", "mongodb": "^6.20.0" }
+}
