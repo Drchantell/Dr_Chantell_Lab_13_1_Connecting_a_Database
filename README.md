@@ -1,42 +1,29 @@
-Lab 13.1: Connecting a Database
+# Lab 13.1: Connecting a Database
 
-I built a small Node.js and Express application that connects to MongoDB Atlas. This is the starting point for a social media API. My application has one GET route at `/`. It returns a success message when MongoDB responds and a 500 error message when the connection fails. This lab checks the connection; it does not create users, posts, or collections.
+In this lab, I created a simple Node.js and Express server that connects to MongoDB Atlas. I used the MongoDB driver to test the connection and dotenv to keep my connection string in a private `.env` file.
 
-I used Express to create my server, MongoClient to connect to MongoDB, and dotenv to load my private connection string. I kept the code simple so I can follow what each part does. The response is JSON, so this assignment does not need HTML, CSS, or React.
-
-## How I run my project
-
-I open the extracted project folder in VS Code and run `npm install` in the terminal. I copy `.env.example` to a new file named `.env`, replace the sample URI with my Atlas connection string, and save it. Then I run `node server.js` and visit http://localhost:3001/.
+When I visit `http://localhost:3001/`, the app checks the database connection. If it works, I see:
 
 ```json
 { "message": "Successfully connected to the database!" }
 ```
 
-If the database cannot connect, my route returns HTTP 500 with this response:
+## How to run my project
 
-```json
-{ "message": "Failed to connect to the database." }
-```
+1. Run `npm install`.
+2. Copy `.env.example` and rename the copy `.env`.
+3. Add my MongoDB Atlas connection string to `.env`.
+4. Run `npm start`.
+5. Open `http://localhost:3001/`.
 
-I keep `.env` and `node_modules` out of GitHub with `.gitignore`. My `.env.example` contains placeholders so someone else can set up their own connection. I include `package-lock.json` so the dependency versions can be reproduced.
+I used `.gitignore` to keep my `.env` file and password off GitHub.
 
+## What I learned
 
-What I am learning
+I learned how to connect an Express app to MongoDB Atlas and protect private information with environment variables. I also learned that the server can start even when the database is not connected. Opening the route confirms whether MongoDB is responding.
 
-I am learning that starting an Express server and connecting to a database are separate steps. Seeing the server address in the terminal does not prove the database connected. Opening the route runs the connection check. I use `await` because the database needs time to respond, and I use `try/catch` to return a useful error response if something goes wrong.
+## Challenge
 
-One challenge I may encounter is using the wrong database password or forgetting to allow my IP address in Atlas. Another is saving the connection string under a different variable name. I can work through these problems by checking one setting at a time without sharing my password.
+My biggest challenge was understanding the difference between my Atlas account password and my database user password. I also had to check my connection string and network access settings. Working through each setting one at a time helped me understand how the connection works.
 
-
-Setup and verification status
-
-The project includes the application code and setup instructions. My personal Atlas project, user permissions, network settings, and successful live database connection must still be verified before submission. This exercise uses a free cluster 
-
-References
-
-- [MongoDB Node.js connection guide](https://www.mongodb.com/docs/drivers/node/current/connect/)
-- [MongoDB connection targets and ping example](https://www.mongodb.com/docs/drivers/node/current/connect/connection-targets/)
-
-Author:
-Dr. Chantell McDowell, 
-Per Scholas student
+**Author:** Dr. Chantell McDowell, Per Scholas student
