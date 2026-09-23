@@ -2,11 +2,11 @@
 
 ## Why should I whitelist IP addresses?
 
-I whitelist IP addresses to control which devices can try to connect to my database. Using `0.0.0.0/0` allows connections from anywhere, so I would use a limited IP address for a real production application.
+I whitelist IP addresses to control which devices can try to connect to my database. Using `0.0.0.0/0` allows connections from anywhere, so anyone can attempt to connect. A password is still required, but stolen credentials could let someone read, change, or delete my data. For a real production application, I would allow only the IP addresses that need access.
 
 ## What does dotenv do?
 
-I use dotenv to load my MongoDB connection string from my `.env` file. This keeps my username, password, and connection string out of my JavaScript code and GitHub.
+I use dotenv to load my MongoDB connection string from my `.env` file. This keeps my username, password, and connection string out of my JavaScript code. My `.gitignore` keeps `.env` off GitHub. Dotenv does not encrypt my password. In production, I could use my hosting service’s environment variable settings or a secret manager.
 
 ## How would I fix a failed connection?
 
