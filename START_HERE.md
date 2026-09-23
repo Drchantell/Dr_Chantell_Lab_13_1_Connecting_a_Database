@@ -53,23 +53,28 @@ The terminal's startup message only confirms Express is listening. The browser's
 
 ## 5. Submit to GitHub
 
-Create an empty GitHub repository named `Dr_Chantell_Lab_13_1_Connecting_a_Database`. Do not initialize it with a README if you plan to use the commands below.
+This repository already exists:
+https://github.com/Drchantell/Dr_Chantell_Lab_13_1_Connecting_a_Database
 
-Run these commands in your project folder:
+If you downloaded a ZIP, you can use it to run the lab locally. If you want to save further changes with Git, clone the repository and open that folder in VS Code:
 
 ```bash
-git init
+git clone https://github.com/Drchantell/Dr_Chantell_Lab_13_1_Connecting_a_Database.git
+cd Dr_Chantell_Lab_13_1_Connecting_a_Database
+```
+
+After editing files in your cloned project, run:
+
+```bash
 git add .
 git status
 ```
 
-Check that `.env` and `node_modules` are NOT listed for commit. `.env.example` should be listed because it contains only placeholders. Then run:
+Check that `.env` and `node_modules` are NOT listed for commit. `.env.example` is safe because it contains only placeholders. If you have changes to save, run:
 
 ```bash
-git commit -m "Complete Lab 13.1 database connection project"
-git branch -M main
-git remote add origin https://github.com/Drchantell/Dr_Chantell_Lab_13_1_Connecting_a_Database.git
-git push -u origin main
+git commit -m "Update my Lab 13.1 project"
+git push origin main
 ```
 
-These commands assume that you created the repository under `Drchantell` and are authenticated with GitHub. Submit the actual repository page link after the push succeeds. Verify your live Atlas connection first; project code alone does not prove all Atlas setup requirements are complete.
+Submit the repository link after verifying the success response with your live Atlas connection. Code review alone cannot confirm your Atlas project, cluster, user permissions, or network settings.
